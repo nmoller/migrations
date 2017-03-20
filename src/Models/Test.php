@@ -11,5 +11,5 @@ namespace Uqam\Models;
 
 class Test extends \Illuminate\Database\Eloquent\Model {
 
-    protected $table = "test1";
+    protected $table = "DummyTable";
 }

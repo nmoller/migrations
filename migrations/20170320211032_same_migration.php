@@ -1,12 +1,16 @@
 <?php
-
 use Uqam\Migrations\Migration;
 
-class TestMigration extends Migration
+class SameMigration extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        $this->schema->create('test1', function(Illuminate\Database\Schema\Blueprint $table){
+        $this->schema->create('DummyTable2', function (Illuminate\Database\Schema\Blueprint $table) {
             // Auto-increment id
             $table->increments('id');
             $table->integer('serial_number');
@@ -15,8 +19,14 @@ class TestMigration extends Migration
             $table->timestamps();
         });
     }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        $this->schema->drop('test1');
+        $this->schema->drop('DummyTable2');
     }
 }

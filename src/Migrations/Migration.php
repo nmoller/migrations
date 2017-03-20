@@ -17,13 +17,13 @@ class Migration extends AbstractMigration {
 
     public $schema;
 
-    const DB_PATH = __DIR__.'/../../database/database.sqlite3';
+    //const DB_PATH = __DIR__.'/../../database/database.sqlite3';
 
     public function init() {
         $this->capsule = new Capsule();
         $this->capsule->addConnection([
           'driver' => 'sqlite',
-          'database' => self::DB_PATH,
+          'database' => __DIR__.'/../../database/database.sqlite3',
           'prefix' => '',
         ], 'default');
 
