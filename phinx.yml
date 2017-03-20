@@ -1,0 +1,12 @@
+paths:
+  migrations: migrations
+  seeds: %%PHINX_CONFIG_DIR%%/database/seeds
+
+migration_base_class: Uqam\Migrations\Migration
+
+environments:
+  default_migration_table: phinxlog
+  default_database: dev
+  dev:
+    adapter: sqlite
+    name: Uqam\Migrations\Migration::DB_PATH
