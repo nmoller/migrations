@@ -4,6 +4,9 @@ paths:
 
 migration_base_class: Uqam\Migrations\Migration
 
+templates:
+  file: %%PHINX_CONFIG_DIR%%/src/Migrations/stubs/update.stub
+
 environments:
   default_migration_table: phinxlog
   default_database: dev
