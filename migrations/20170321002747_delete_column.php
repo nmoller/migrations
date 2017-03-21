@@ -23,9 +23,9 @@ class DeleteColumn extends Migration
      */
     public function down()
     {
-        $this->schema->create('DummyTable3', function (Illuminate\Database\Schema\Blueprint $table) {
+        $this->schema->table('DummyTable3', function (Illuminate\Database\Schema\Blueprint $table) {
             // Defaire modification
-           $table->integer('serial_number');
+           $table->addColumn('integer','serial_number')->default(0);
 
         });
     }
